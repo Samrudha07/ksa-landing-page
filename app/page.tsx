@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
@@ -146,11 +145,19 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f6f9ff] text-[#0d1b3f]">
       {/* Navbar */}
-      <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <nav
+        dir="ltr"
+        className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur"
+      >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="#" className="text-lg font-semibold text-[#0d1b3f]">
-            Mac & Ross
-          </a>
+          <div className="flex flex-col leading-tight">
+            <a href="#" className="block text-xl font-semibold text-[#0d1b3f]">
+              KSA
+            </a>
+            <a href="#" className="block text-sm font-semibold text-[#0d1b3f]">
+              Mac & Ross
+            </a>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">
@@ -200,16 +207,16 @@ export default function Home() {
               {/* Dropdown */}
               <div className="absolute right-0 mt-2 w-32 rounded-lg border border-slate-200 bg-white shadow-lg hidden group-hover:block">
                 <button
-                  className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0]"
+                  className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0] cursor-pointer"
                   onClick={() => handleLanguageSelect("en")}
                 >
                   English
                 </button>
                 <button
-                  className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0]"
+                  className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0] cursor-pointer"
                   onClick={() => handleLanguageSelect("ar")}
                 >
-                  Arabic
+                  العربية
                 </button>
               </div>
             </div>
@@ -658,4 +665,3 @@ export default function Home() {
     </main>
   );
 }
-
