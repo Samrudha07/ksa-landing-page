@@ -144,14 +144,14 @@ const About = ({ onOpenPopup }) => {
                             ))}
                         </div>
 
-                        {onOpenPopup && (
+                        {/* {onOpenPopup && (
                             <button
                                 onClick={onOpenPopup}
                                 className="inline-flex items-center justify-center self-start rounded-2xl bg-[#E94C37] px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-[#d13d2b] transition-colors"
                             >
                                 {t("hero.contactButton")}
                             </button>
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>

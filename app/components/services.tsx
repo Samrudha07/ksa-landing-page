@@ -142,7 +142,7 @@ const ChooseTheBest = ({ onOpenPopup }: ChooseTheBestProps) => {
                         </p>
                         <div className="flex justify-start">
                             <button
-                                className="bg-[#E94C37] text-white px-6 py-3 rounded-2xl font-semibold shadow-lg hover:bg-[#d13d2b] transition-colors"
+                                className="bg-[#E94C37] cursor-pointer text-white px-6 py-3 rounded-2xl font-semibold shadow-lg hover:bg-[#d13d2b] transition-colors"
                                 onClick={onOpenPopup}
                             >
                                 {t("servicesSection.cta")}

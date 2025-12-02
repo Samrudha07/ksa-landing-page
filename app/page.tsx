@@ -1,13 +1,14 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import ChooseTheBest from "./components/services";
 import About from "./components/about";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 import Headerpopup from "./components/Headerpopup";
 import "./../i18n/i18n";
 import { useTranslation } from "react-i18next";
@@ -86,7 +87,10 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false); 
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [workPhone, setWorkPhone] = useState("");
+  const [workPhoneError, setWorkPhoneError] = useState("");
 
   const openPopup = () => setIsOpen(true);
   const closePopup = () => setIsOpen(false);
@@ -100,10 +104,45 @@ export default function Home() {
     }
   }, [i18n.language]);
 
+  // Show "scroll to top" arrow when user scrolls down
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleLanguageSelect = (lang: "en" | "ar") => {
     i18n.changeLanguage(lang);
     setIsLangOpen(false);
   };
+
+  const handleWorkPhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, "");
+    if (value.length <= 10) {
+      setWorkPhone(value);
+      if (workPhoneError) setWorkPhoneError("");
+    }
+  };
+
+  const handleWorkWithUsSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (workPhone.length !== 10) {
+      setWorkPhoneError("Phone number must be exactly 10 digits.");
+      return;
+    }
+
+    setWorkPhoneError("");
+    // TODO: handle actual submit (e.g., API call) here.
+  };
+
+  const currentLanguageLabel =
+    i18n.language === "ar" ? "Arabic" : "English";
   return (
     <main className="min-h-screen bg-[#f6f9ff] text-[#0d1b3f]">
       {/* Navbar */}
@@ -121,16 +160,17 @@ export default function Home() {
               </a>
             ))}
 
-            {/* Language Button (Desktop - open on hover) */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsLangOpen(true)}
-              onMouseLeave={() => setIsLangOpen(false)}
-            >
+            {/* Language Dropdown (Desktop - open on click) */}
+            {/* <div className="relative">
               <button
-                className="inline-flex items-center justify-center rounded-lg bg-[#E94C37] px-4 py-2 text-white hover:bg-[#ff755c] cursor-pointer"
+                onClick={() => setIsLangOpen((prev) => !prev)}
+                className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#E94C37] px-4 py-2 text-white hover:bg-[#ff755c] cursor-pointer"
               >
-                {t("nav.language")}
+                <span>{currentLanguageLabel}</span>
+                <IoChevronDown
+                  className={`h-4 w-4 transition-transform cursor-pointer ${isLangOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                />
               </button>
 
               {isLangOpen && (
@@ -149,14 +189,38 @@ export default function Home() {
                   </button>
                 </div>
               )}
+            </div> */}
+            <div className="relative group cursor-pointer">
+              {/* Current Language Display (No background) */}
+              <div className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-[#0d1b3f]">
+                <span>{currentLanguageLabel}</span>
+                <IoChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+              </div>
+
+              {/* Dropdown */}
+              <div className="absolute right-0 mt-2 w-32 rounded-lg border border-slate-200 bg-white shadow-lg hidden group-hover:block">
+                <button
+                  className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0]"
+                  onClick={() => handleLanguageSelect("en")}
+                >
+                  English
+                </button>
+                <button
+                  className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0]"
+                  onClick={() => handleLanguageSelect("ar")}
+                >
+                  Arabic
+                </button>
+              </div>
             </div>
+
 
             {/* Popup Button */}
             <button
               onClick={() => setIsPopupOpen(true)}
               className="inline-flex items-center justify-center rounded-lg bg-[#E94C37] px-4 py-2 text-white hover:bg-[#ff755c] cursor-pointer"
             >
-              Work With Us
+              {t("workWithUs.title")}
             </button>
           </div>
 
@@ -210,9 +274,13 @@ export default function Home() {
               <div className="relative">
                 <button
                   onClick={() => setIsLangOpen((prev) => !prev)}
-                  className="inline-flex items-center justify-center rounded-2xl bg-[#E94C37] px-4 py-3 text-center font-semibold text-white shadow-lg hover:-translate-y-0.5 hover:bg-[#ff755c] w-full"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#E94C37] px-4 py-3 text-center font-semibold text-white shadow-lg hover:-translate-y-0.5 hover:bg-[#ff755c] w-full"
                 >
-                  {t("nav.language")}
+                  <span>{currentLanguageLabel}</span>
+                  <IoChevronDown
+                    className={`h-4 w-4 transition-transform ${isLangOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                  />
                 </button>
 
                 {isLangOpen && (
@@ -248,31 +316,6 @@ export default function Home() {
         )}
       </nav>
 
-      {/* <header className="relative isolate overflow-hidden bg-gradient-to-br from-[#2b2b2b] via-[#151515] to-[#050505] px-6 py-24 text-center text-white sm:py-32 lg:px-8">
-        <div className="mx-auto w-full max-w-7xl">
-          <span className="inline-flex items-center gap-2 rounded-full border border-[#E94C37]/40 px-4 py-1 text-xs uppercase tracking-[0.2em] text-[#E94C37]">
-            {t("hero.tag")}
-          </span>
-
-          <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-            {t("hero.title")}
-          </h1>
-
-          <p className="mt-4 text-lg text-gray-300 sm:text-xl">
-            {t("hero.subtitle")}
-          </p>
-
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-base text-gray-200">
-            <div className="rounded-full border border-white/10 px-4 py-2">70+ professionals</div>
-            <div className="rounded-full border border-white/10 px-4 py-2">GCC-wide coverage</div>
-            <div className="rounded-full border border-white/10 px-4 py-2">Strategic financial solutions</div>
-          </div>
-        </div>
-
-        <div className="pointer-events-none absolute inset-0 -z-10 opacity-40">
-          <div className="absolute inset-y-10 inset-x-1/4 rounded-full bg-[#E94C37] blur-[160px]" />
-        </div>
-      </header> */}
       <header className="relative isolate overflow-hidden bg-gradient-to-br from-[#2b2b2b] via-[#151515] to-[#050505] px-6 py-24 text-center text-white sm:py-32 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#E94C37]/40 px-4 py-1 text-xs uppercase tracking-[0.2em] text-[#E94C37]">
@@ -434,7 +477,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="mx-auto block rounded-2xl bg-[#E94C37] px-6 py-3 text-sm font-semibold text-white"
+                className="mx-auto block rounded-2xl bg-[#E94C37] px-6 py-3 text-sm font-semibold text-white cursor-pointer"
               >
                 {t("contact.submit")}
               </motion.button>
@@ -465,11 +508,12 @@ export default function Home() {
               {t("workWithUs.title")}
             </h2>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleWorkWithUsSubmit}>
               <div>
                 <label className="text-sm font-medium">{t("contact.fullName")}</label>
                 <input
                   type="text"
+                  placeholder=""
                   className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
                 />
               </div>
@@ -480,6 +524,23 @@ export default function Home() {
                   type="email"
                   className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
                 />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium">Phone Number</label>
+                <input
+                  type="tel"
+                  value={workPhone}
+                  onChange={handleWorkPhoneChange}
+                  maxLength={10}
+                  inputMode="numeric"
+                  pattern="\d{10}"
+                  placeholder="Enter 10-digit phone number"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
+                />
+                {workPhoneError && (
+                  <p className="mt-1 text-sm text-red-500">{workPhoneError}</p>
+                )}
               </div>
 
               <div>
@@ -500,7 +561,7 @@ export default function Home() {
 
               <button
                 type="submit"
-                className="mx-auto block cursor-pointer rounded-2xl bg-[#E94C37] px-6 py-3 text-sm font-semibold text-white"
+                className="mx-auto block cursor-pointer  rounded-2xl bg-[#E94C37] px-6 py-3 text-sm font-semibold text-white"
               >
                 {t("workWithUs.submit")}
               </button>
@@ -510,12 +571,90 @@ export default function Home() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 bg-[#0b1d3a] px-6 py-10 text-center text-sm text-white/80">
-        <p>
+      <footer className="mt-10 border-t border-slate-200 bg-[#0b1d3a] px-6 py-10 text-sm text-white/80">
+        <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+          {/* Brand / Summary */}
+          <div className="max-w-md space-y-3">
+            <h3 className="text-lg font-semibold text-white">Mac & Ross</h3>
+            <p className="text-xs sm:text-sm text-slate-200/80">
+              {t("contact.description")}
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex flex-col gap-2">
+            <h4 className="text-sm font-semibold text-white">
+              {t("nav.services")}
+            </h4>
+            <nav className="flex flex-col gap-1 text-xs sm:text-sm">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="cursor-pointer text-white/80 hover:text-[#E94C37] transition-colors"
+                >
+                  {t(`nav.${link.key}`)}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-2 text-xs sm:text-sm">
+            <h4 className="text-sm font-semibold text-white">
+              {t("contact.tag")}
+            </h4>
+            <p className="flex items-center gap-2">
+              <FaLocationDot className="shrink-0" />
+              <span>{t("contact.location")}</span>
+            </p>
+            <p className="flex items-center gap-2">
+              <MdEmail className="shrink-0" />
+              <span>{t("contact.email")}</span>
+            </p>
+            <p className="flex items-center gap-2">
+              <FaPhoneAlt className="shrink-0" />
+              <span>{t("contact.phone")}</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center text-[11px] sm:text-xs text-white/60">
           © {new Date().getFullYear()} Mac & Ross Management Company.{" "}
           {t("footer.rights")}
-        </p>
+        </div>
       </footer>
+
+      {/* Scroll to Top Arrow */}
+      {showScrollTop && (
+        <>
+          {/* Scroll to Top Button */}
+          <button
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            aria-label="Scroll to top"
+            className="fixed bottom-6 right-6 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#E94C37] text-white shadow-lg"
+          >
+            <IoChevronUp className="h-5 w-5" />
+          </button>
+
+          {/* Separate Phone Button (scrolls to contact section) */}
+          <button
+            onClick={() => {
+              const el = document.querySelector("#contact") as HTMLElement | null;
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            aria-label="Contact"
+            className="fixed bottom-20 right-6 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#0b1d3a] text-white shadow-lg border border-[#E94C37]"
+          >
+            <FaPhoneAlt className="h-4 w-4" />
+          </button>
+
+        </>
+      )}
     </main>
   );
 }
