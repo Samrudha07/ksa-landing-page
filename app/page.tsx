@@ -9,68 +9,68 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 import Headerpopup from "./components/Headerpopup";
+import Team from "./components/Team";
 import "./../i18n/i18n";
 import { useTranslation } from "react-i18next";
 
 const services = [
   {
-    title: "Assistance in Company Formation (MISA / CR / RHQ)",
+    title: "Company Formation & Licensing",
     summary:
-      "Expert guidance to launch seamlessly in KSA with complete support for regulatory approvals.",
+      "Comprehensive support for MISA Investment Licenses, Commercial Registration (CR), and Regional Headquarters (RHQ) setup.",
     items: [
-      "Step-by-step support for MISA, Commercial Registration, and RHQ approvals",
-      "Compliance-first approach to meet every local requirement",
-      "Risk-free setup so you can focus on strategy from day one",
+      "Expert guidance to set up your business seamlessly in KSA",
+      "Complete support with MISA, Commercial Registration, and RHQ approvals",
+      "Ensuring compliance with local regulations for a smooth start",
+    ],
+  },
+  {
+    title: "Audit & Assurance",
+    summary:
+      "Statutory and internal audit services to ensure financial integrity and regulatory compliance.",
+    items: [
+      "Assistance in planning and executing statutory and internal audits",
+      "Liaison with auditors for timely and smooth audit processes",
+      "Ensure accuracy, compliance, and risk management in financial reporting",
     ],
   },
   {
     title: "VAT Compliance Support",
     summary:
-      "Keep VAT processes accurate, timely, and audit-ready with specialists on your side.",
+      "Expert management of VAT registration, filing, and ongoing ZATCA requirements.",
     items: [
-      "Full coverage for VAT registration, filing, and reporting",
-      "Advisory services to optimize processes and ensure accuracy",
-      "Proactive monitoring that minimizes penalties and cash-flow impact",
+      "Comprehensive VAT registration and filing assistance for businesses",
+      "Expert advisory to ensure accurate reporting and compliance with KSA VAT laws",
+      "Minimize risks and optimize your VAT processes efficiently",
     ],
   },
   {
-    title: "Withholding Tax (WHT) Advisory Support",
+    title: "Withholding Tax (WHT) Advisory",
     summary:
-      "Navigate WHT obligations confidently with practical, compliant solutions.",
+      "Strategic support for navigating WHT obligations and cross-border payment compliance.",
     items: [
-      "Interpretation of KSA WHT regulations aligned to your business model",
-      "Accurate calculation, reporting, and submission support",
-      "Controls to mitigate exposure and maintain regulator trust",
+      "Advisory services for KSA WHT regulations and obligations",
+      "Assist in accurate calculation, reporting, and submission of WHT",
+      "Mitigate risks with practical and compliant tax solutions",
     ],
   },
   {
-    title: "Tax Assistance",
+    title: "Comprehensive Tax Assistance",
     summary:
-      "Comprehensive tax guidance across corporate, income, and indirect taxes.",
+      "End-to-end tax planning, preparation, and submission services.",
     items: [
-      "End-to-end support from planning through ongoing filings",
-      "Strategies that optimize liabilities without compromising compliance",
-      "Clarity on complex tax matters to unlock growth",
+      "End-to-end support on corporate, income, and indirect taxes in KSA",
+      "Strategic guidance to optimize tax liabilities and ensure compliance",
+      "Simplifying complex tax matters for your business growth",
     ],
   },
   {
-    title: "Audit Support Services",
+    title: "Ultimate Beneficiary Ownership (UBO) Advisory",
     summary:
-      "Stay ready for statutory and internal audits with dedicated liaison support.",
+      "Specialized guidance on disclosure requirements and corporate transparency governance.",
     items: [
-      "Audit readiness planning and execution assistance",
-      "Coordination with auditors for a smooth, timely close",
-      "Controls that strengthen accuracy, compliance, and risk management",
-    ],
-  },
-  {
-    title: "Ultimate Beneficial Ownership Advisory",
-    summary:
-      "Ensure transparent ownership disclosures that satisfy every KSA obligation.",
-    items: [
-      "Guidance on UBO identification and documentation",
-      "Practical frameworks to maintain ongoing compliance",
-      "Efficient processes tailored to your corporate structure",
+      "Advisory on UBO identification, disclosure, and compliance requirements",
+      "Helping companies meet KSA regulatory obligations efficiently",
     ],
   },
 ];
@@ -366,6 +366,11 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="w-full bg-white px-6 py-4 lg:px-8">
         <About onOpenPopup={openPopup} />
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="w-full bg-white">
+        <Team />
       </section>
 
       {/* Services Section */}

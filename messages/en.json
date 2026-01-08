@@ -7,8 +7,7 @@
   },
   "hero": {
     "tag": "@ksa • Compliance & Advisory",
-    "title": "Mac & Ross Management Company",
-    "subtitle": "A trusted compliance and advisory firm in Saudi Arabia, backed by RT Asean. We blend local market mastery with international standards to deliver strategic financial solutions for SMEs and MNEs across the GCC.",
+    "title": "Bugis MNR Chartered Accountant from Mac & Ross Management Company",
     "badge1": "70+ professionals",
     "badge2": "GCC-wide coverage",
     "badge3": "Strategic financial solutions",
@@ -28,9 +27,9 @@
     "help": "How can we help?",
     "helpPlaceholder": "Briefly share your needs or questions",
     "submit": "Submit Inquiry",
-    "location": "Riyadh, Saudi Arabia",
-    "email": "contact@macross-ksa.com",
-    "phone": "+966 (0)11 000 0000"
+    "location": "Office no 002, 3539 Naeem Bin Hammad, Al Wizarat, Riyadh",
+    "email": "devang@mnrksa.com",
+    "phone": "KSA - +966 – 53 775 0884,  UAE - + 971- 54 352 2747"
   },
   "footer": {
     "rights": "All rights reserved."
@@ -59,45 +58,66 @@
   },
   "services": {
     "1": {
-      "title": "Assistance in Company Formation (MISA / CR / RHQ)",
-      "description": "Launch confidently in KSA with experienced partners steering every approval and compliance checkpoint.",
+      "title": "Company Formation & Licensing",
+      "description": "Comprehensive support for MISA Investment Licenses, Commercial Registration (CR), and Regional Headquarters (RHQ) setup.",
       "h1": "Expert guidance to set up your business seamlessly in KSA.",
       "h2": "Complete support with MISA, Commercial Registration, and RHQ approvals.",
       "h3": "Ensuring compliance with local regulations for a smooth start."
     },
     "2": {
-      "title": "VAT Compliance Support",
-      "description": "Stay ahead of every VAT deadline with proactive advisory and airtight filings.",
-      "h1": "Comprehensive VAT registration and filing assistance for businesses.",
-      "h2": "Expert advisory to ensure accurate reporting and compliance with KSA VAT laws.",
-      "h3": "Minimize risks and optimize your VAT processes efficiently."
-    },
-    "3": {
-      "title": "Withholding Tax (WHT) Advisory Support",
-      "description": "Translate complex WHT rules into practical workflows that prevent penalties.",
-      "h1": "Advisory services for KSA WHT regulations and obligations.",
-      "h2": "Assist in accurate calculation, reporting, and submission of WHT.",
-      "h3": "Mitigate risks with practical and compliant tax solutions."
-    },
-    "4": {
-      "title": "Tax Assistance",
-      "description": "Tap into end-to-end tax expertise spanning corporate, income, and indirect taxes.",
-      "h1": "End-to-end support on corporate, income, and indirect taxes in KSA.",
-      "h2": "Strategic guidance to optimize tax liabilities and ensure compliance.",
-      "h3": "Simplifying complex tax matters for your business growth."
-    },
-    "5": {
-      "title": "Audit Support Services",
-      "description": "Run confident statutory and internal audits with a team that sits between you and the auditors.",
+      "title": "Audit & Assurance",
+      "description": "Statutory and internal audit services to ensure financial integrity and regulatory compliance.",
       "h1": "Assistance in planning and executing statutory and internal audits.",
       "h2": "Liaison with auditors for timely and smooth audit processes.",
       "h3": "Ensure accuracy, compliance, and risk management in financial reporting."
     },
+    "3": {
+      "title": "VAT Compliance Support",
+      "description": "Expert management of VAT registration, filing, and ongoing ZATCA requirements.",
+      "h1": "Comprehensive VAT registration and filing assistance for businesses.",
+      "h2": "Expert advisory to ensure accurate reporting and compliance with KSA VAT laws.",
+      "h3": "Minimize risks and optimize your VAT processes efficiently."
+    },
+    "4": {
+      "title": "Withholding Tax (WHT) Advisory",
+      "description": "Strategic support for navigating WHT obligations and cross-border payment compliance.",
+      "h1": "Advisory services for KSA WHT regulations and obligations.",
+      "h2": "Assist in accurate calculation, reporting, and submission of WHT.",
+      "h3": "Mitigate risks with practical and compliant tax solutions."
+    },
+    "5": {
+      "title": "Comprehensive Tax Assistance",
+      "description": "End-to-end tax planning, preparation, and submission services.",
+      "h1": "End-to-end support on corporate, income, and indirect taxes in KSA.",
+      "h2": "Strategic guidance to optimize tax liabilities and ensure compliance.",
+      "h3": "Simplifying complex tax matters for your business growth."
+    },
     "6": {
-      "title": "Ultimate Beneficial Ownership Advisory",
-      "description": "Identify, document, and disclose UBO structures in line with evolving KSA rules.",
+      "title": "Ultimate Beneficiary Ownership (UBO) Advisory",
+      "description": "Specialized guidance on disclosure requirements and corporate transparency governance.",
       "h1": "Advisory on UBO identification, disclosure, and compliance requirements.",
       "h2": "Helping companies meet KSA regulatory obligations efficiently."
+    }
+  },
+  "team": {
+    "badge": "Our Experts",
+    "heading": "Meet Our Leadership Team",
+    "members": {
+      "1": {
+        "name": "Abdullah Bugis",
+        "title": "US CPA, SOCPA-licensed Audit Partner",
+        "description": "Abdullah Bugis is a SOCPA-licensed Audit Partner at Bugis MNR Chartered Accountants. He brings extensive experience from Big Four firms and specializes in statutory audits, internal audits, IFRS compliance, and risk management. Mr. Abdullah has led complex audit engagements for large corporates and family-owned businesses across diverse industries and is recognized for his strong leadership, technical expertise, and commitment to delivering high-quality, value-driven audit services."
+      },
+      "2": {
+        "name": "CA Dheeraj Ranasaria",
+        "title": "FCA - Audit & Assurance Expert",
+        "description": "CA Dheeraj Ranasaria (FCA) is a seasoned Audit and Assurance expert with over 2 decades of experience in risk advisory and systems consultancy. Having led complex assignments across all major sectors, he specializes in IFRS, IAS, and IPSAS compliance. Dheeraj is recognized for transforming intricate accounting challenges into streamlined, risk-resilient business processes."
+      },
+      "3": {
+        "name": "Devang Mehta",
+        "title": "CA, CPA (Ireland)",
+        "description": "Devang Mehta is a tax and regulatory compliance professional specializing in the KSA and UAE markets, with Big Four experience. He advises clients on VAT, Zakat/ Corporate Income Tax, and cross-border tax and regulatory matters. Mr. Devang is known for his practical, solution-oriented approach and deep understanding of regional regulations, helping clients navigate complex compliance requirements with confidence and clarity."
+      }
     }
   },
   "headerPopup": {
@@ -108,4 +128,3 @@
     "submit": "Submit"
   }
 }
-
