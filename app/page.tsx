@@ -332,10 +332,10 @@ export default function Home() {
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             {t("hero.title")}
           </h1>
-
+{/* 
           <p className="mt-4 text-lg text-gray-300 sm:text-xl">
             {t("hero.subtitle")}
-          </p>
+          </p> */}
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-base text-gray-200">
             <div className="rounded-full border border-white/10 px-4 py-2">
@@ -409,7 +409,7 @@ export default function Home() {
 
               {/* ICON LIST WITH STAGGER */}
               <motion.div
-                className="space-y-3 text-xl font-bold text-slate-700 pt-4"
+                className="space-y-4 text-xl font-bold text-slate-700 pt-4"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -421,22 +421,47 @@ export default function Home() {
                   },
                 }}
               >
-                {[
-                  { icon: <FaLocationDot />, text: t("contact.location") },
-                  { icon: <MdEmail />, text: t("contact.email") },
-                  { icon: <FaPhoneAlt />, text: t("contact.phone") },
-                ].map((item, index) => (
-                  <motion.p
-                    key={index}
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                    className="flex items-center gap-2"
-                  >
-                    {item.icon} <span>{item.text}</span>
-                  </motion.p>
-                ))}
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  className="flex items-center gap-2"
+                >
+                  <FaLocationDot className="shrink-0" />
+                  <span>{t("contact.location")}</span>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  className="flex items-center gap-2"
+                >
+                  <MdEmail className="shrink-0" />
+                  <a href={`mailto:${t("contact.email")}`} className="hover:text-[#E94C37] transition-colors">
+                    {t("contact.email")}
+                  </a>
+                </motion.div>
+
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                  className="flex items-start gap-2"
+                >
+                  <FaPhoneAlt className="shrink-0 mt-1" />
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+966537750884" className="hover:text-[#E94C37] transition-colors">
+                      KSA: {t("contact.phone_ksa", "+966 53 775 0884")}
+                    </a>
+                    <a href="tel:+971543522747" className="hover:text-[#E94C37] transition-colors">
+                      UAE: {t("contact.phone_uae", "+971 54 352 2747")}
+                    </a>
+                  </div>
+                </motion.div>
               </motion.div>
             </motion.div>
 
@@ -616,18 +641,27 @@ export default function Home() {
             <h4 className="text-sm font-semibold text-white">
               {t("contact.tag")}
             </h4>
-            <p className="flex items-center gap-2">
-              <FaLocationDot className="shrink-0" />
+            <div className="flex items-start gap-2">
+              <FaLocationDot className="shrink-0 mt-1" />
               <span>{t("contact.location")}</span>
-            </p>
-            <p className="flex items-center gap-2">
+            </div>
+            <div className="flex items-center gap-2">
               <MdEmail className="shrink-0" />
-              <span>{t("contact.email")}</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <FaPhoneAlt className="shrink-0" />
-              <span>{t("contact.phone")}</span>
-            </p>
+              <a href={`mailto:${t("contact.email")}`} className="hover:text-[#E94C37] transition-colors">
+                {t("contact.email")}
+              </a>
+            </div>
+            <div className="flex items-start gap-2">
+              <FaPhoneAlt className="shrink-0 mt-1" />
+              <div className="flex flex-col gap-1">
+                <a href="tel:+966537750884" className="hover:text-[#E94C37] transition-colors">
+                  KSA: {t("contact.phone_ksa", "+966 53 775 0884")}
+                </a>
+                <a href="tel:+971543522747" className="hover:text-[#E94C37] transition-colors">
+                  UAE: {t("contact.phone_uae", "+971 54 352 2747")}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
