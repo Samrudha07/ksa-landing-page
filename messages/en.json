@@ -60,44 +60,32 @@
   "services": {
     "1": {
       "title": "Company Formation & Licensing",
-      "description": "Comprehensive support for MISA Investment Licenses, Commercial Registration (CR), and Regional Headquarters (RHQ) setup.",
-      "h1": "Expert guidance to set up your business seamlessly in KSA.",
-      "h2": "Complete support with MISA, Commercial Registration, and RHQ approvals.",
-      "h3": "Ensuring compliance with local regulations for a smooth start."
+      "description": "Comprehensive support for MISA Investment Licenses, Commercial Registration (CR), and Regional Headquarters (RHQ) setup."
+ 
     },
     "2": {
       "title": "Audit & Assurance",
-      "description": "Statutory and internal audit services to ensure financial integrity and regulatory compliance.",
-      "h1": "Assistance in planning and executing statutory and internal audits.",
-      "h2": "Liaison with auditors for timely and smooth audit processes.",
-      "h3": "Ensure accuracy, compliance, and risk management in financial reporting."
+      "description": "Statutory and internal audit services to ensure financial integrity and regulatory compliance."
+     
     },
     "3": {
       "title": "VAT Compliance Support",
-      "description": "Expert management of VAT registration, filing, and ongoing ZATCA requirements.",
-      "h1": "Comprehensive VAT registration and filing assistance for businesses.",
-      "h2": "Expert advisory to ensure accurate reporting and compliance with KSA VAT laws.",
-      "h3": "Minimize risks and optimize your VAT processes efficiently."
+      "description": "Expert management of VAT registration, filing, and ongoing ZATCA requirements."
+   
     },
     "4": {
       "title": "Withholding Tax (WHT) Advisory",
-      "description": "Strategic support for navigating WHT obligations and cross-border payment compliance.",
-      "h1": "Advisory services for KSA WHT regulations and obligations.",
-      "h2": "Assist in accurate calculation, reporting, and submission of WHT.",
-      "h3": "Mitigate risks with practical and compliant tax solutions."
+      "description": "Strategic support for navigating WHT obligations and cross-border payment compliance."
+   
     },
     "5": {
       "title": "Comprehensive Tax Assistance",
-      "description": "End-to-end tax planning, preparation, and submission services.",
-      "h1": "End-to-end support on corporate, income, and indirect taxes in KSA.",
-      "h2": "Strategic guidance to optimize tax liabilities and ensure compliance.",
-      "h3": "Simplifying complex tax matters for your business growth."
+      "description": "End-to-end tax planning, preparation, and submission services."
+   
     },
     "6": {
       "title": "Ultimate Beneficiary Ownership (UBO) Advisory",
-      "description": "Specialized guidance on disclosure requirements and corporate transparency governance.",
-      "h1": "Advisory on UBO identification, disclosure, and compliance requirements.",
-      "h2": "Helping companies meet KSA regulatory obligations efficiently."
+      "description": "Specialized guidance on disclosure requirements and corporate transparency governance."
     }
   },
   "team": {

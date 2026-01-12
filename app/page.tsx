@@ -205,7 +205,7 @@ export default function Home() {
               </div>
 
               {/* Dropdown */}
-              <div className="absolute right-0 mt-2 w-32 rounded-lg border border-slate-200 bg-white shadow-lg hidden group-hover:block">
+              <div className="absolute right-0  w-32 rounded-lg border border-slate-200 bg-white shadow-lg hidden group-hover:block">
                 <button
                   className="w-full px-4 py-2 text-left hover:bg-[#f0f0f0] cursor-pointer"
                   onClick={() => handleLanguageSelect("en")}
