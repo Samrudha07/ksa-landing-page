@@ -332,10 +332,10 @@ export default function Home() {
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             {t("hero.title")}
           </h1>
-{/* 
+
           <p className="mt-4 text-lg text-gray-300 sm:text-xl">
             {t("hero.subtitle")}
-          </p> */}
+          </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-base text-gray-200">
             <div className="rounded-full border border-white/10 px-4 py-2">

@@ -27,9 +27,9 @@ const services: ServiceCard[] = [
     },
     {
         id: 2,
-        titleKey: "services.2.title",
-        descriptionKey: "services.2.description",
-        icon: "circle",
+        titleKey: "services.4.title",
+        descriptionKey: "services.4.description",
+        icon: "hexagon",
     },
     {
         id: 3,
@@ -39,9 +39,9 @@ const services: ServiceCard[] = [
     },
     {
         id: 4,
-        titleKey: "services.4.title",
-        descriptionKey: "services.4.description",
-        icon: "hexagon",
+        titleKey: "services.2.title",
+        descriptionKey: "services.2.description",
+        icon: "circle",
     },
     {
         id: 5,
