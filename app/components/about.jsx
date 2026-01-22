@@ -119,11 +119,11 @@ const About = ({ onOpenPopup }) => {
                             {t("about.heading")}
                         </h2>
 
-                        <p className="text-gray-600 text-lg text-start mb-6">
+                        <p className="text-gray-600 text-lg text-justify mb-6">
                             {t("about.p1")}
                         </p>
 
-                        <p className="text-gray-600 text-lg text-start mb-8">
+                        <p className="text-gray-600 text-lg text-justify mb-8">
                             {t("about.p2")}
                         </p>
 

@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Apply text justification to content, but exclude hero section */
+p {
+  text-align: justify;
+}
+
+/* Keep hero section text centered */
+header p {
+  text-align: center;
+}
+
+.text-content {
+  text-align: justify;
+}

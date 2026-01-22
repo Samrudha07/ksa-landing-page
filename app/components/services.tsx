@@ -131,7 +131,7 @@ const ChooseTheBest = ({ onOpenPopup }: ChooseTheBestProps) => {
                         </h2>
 
                         {/* CTA Button */}
-                        <p className="text-gray-600 text-lg mb-8 text-start">
+                        <p className="text-gray-600 text-lg mb-8 text-justify">
                             {t("servicesSection.description")}
                         </p>
                         <div className="flex justify-start">
@@ -197,7 +197,7 @@ const ChooseTheBest = ({ onOpenPopup }: ChooseTheBestProps) => {
                                                 </h3>
 
                                                 {/* Description */}
-                                                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                                                <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
                                                     {t(service.descriptionKey)}
                                                 </p>
 

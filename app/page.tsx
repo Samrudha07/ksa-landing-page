@@ -332,11 +332,11 @@ export default function Home() {
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             {t("hero.title")}
           </h1>
-
-          <p className="mt-4 text-lg text-gray-300 sm:text-xl">
+<div className="flex justify-center">
+          <p className="mt-4 text-lg text-gray-300 sm:text-xl text-center">
             {t("hero.subtitle")}
           </p>
-
+</div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-base text-gray-200">
             <div className="rounded-full border border-white/10 px-4 py-2">
               {t("hero.badge1")}
@@ -403,7 +403,7 @@ export default function Home() {
                 {t("contact.titleLine1")} <br /> {t("contact.titleLine2")}
               </h2>
 
-              <p className="text-base text-slate-600 leading-relaxed">
+              <p className="text-base text-slate-600 leading-relaxed text-justify">
                 {t("contact.description")}
               </p>
 
@@ -613,7 +613,7 @@ export default function Home() {
           {/* Brand / Summary */}
           <div className="max-w-md space-y-3">
             <h3 className="text-lg font-semibold text-white">Mac & Ross</h3>
-            <p className="text-xs sm:text-sm text-slate-200/80">
+            <p className="text-xs sm:text-sm text-slate-200/80 text-justify">
               {t("contact.description")}
             </p>
           </div>

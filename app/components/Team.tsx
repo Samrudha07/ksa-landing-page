@@ -77,7 +77,7 @@ const Team = () => {
                                         {member.title}
                                     </p>
                                     <div className={`w-16 h-1 bg-[#E94C37] ${isRtl ? "mr-0 ml-auto" : ""}`} />
-                                    <p className="text-slate-600 text-lg leading-relaxed">
+                                    <p className="text-slate-600 text-lg leading-relaxed text-justify">
                                         {member.description}
                                     </p>
                                 </div>
