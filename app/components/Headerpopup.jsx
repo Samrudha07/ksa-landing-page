@@ -32,8 +32,8 @@ const Headerpopup = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center">
-      <div className="bg-white text-black p-6 rounded-xl w-full max-w-md relative">
+    <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+      <div className="bg-white text-black p-5 rounded-xl w-full max-w-md relative">
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-black text-xl cursor-pointer"
@@ -45,16 +45,16 @@ const Headerpopup = ({ isOpen, onClose }) => {
           {t("headerPopup.title")}
         </h2>
 
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form className="space-y-3" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder={t("headerPopup.namePlaceholder")}
-            className="w-full border p-3 rounded"
+            className="w-full border p-2 rounded text-sm"
           />
           <input
             type="email"
             placeholder={t("headerPopup.emailPlaceholder")}
-            className="w-full border p-3 rounded"
+            className="w-full border p-2 rounded text-sm"
           />
           <input
             type="tel"
@@ -64,16 +64,28 @@ const Headerpopup = ({ isOpen, onClose }) => {
             inputMode="numeric"
             pattern="\d{10}"
             placeholder="Enter 10-digit phone number"
-            className="w-full border p-3 rounded"
+            className="w-full border p-2 rounded text-sm"
           />
           {phoneError && (
-            <p className="text-sm text-red-500">{phoneError}</p>
+            <p className="text-xs text-red-500">{phoneError}</p>
           )}
           <textarea
             placeholder={t("headerPopup.messagePlaceholder")}
-            className="w-full border p-3 rounded"
-            rows="4"
+            className="w-full border p-2 rounded text-sm"
+            rows="3"
           ></textarea>
+
+          <div className="flex items-start gap-2">
+            <input
+              type="checkbox"
+              id="header-consent"
+              required
+              className="mt-1 h-4 w-4 cursor-pointer rounded border-gray-300 text-[#E94C37] focus:ring-[#E94C37]"
+            />
+            <label htmlFor="header-consent" className="text-xs text-slate-600">
+              {t("headerPopup.consent")}
+            </label>
+          </div>
 
           <button
             type="submit"

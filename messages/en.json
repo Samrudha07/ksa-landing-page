@@ -7,8 +7,8 @@
   },
   "hero": {
     "tag": "@ksa • Compliance & Advisory",
-    "title": "Bugis MNR Chartered Accountant ",
-    "subtitle":"A Trusted Audit and Advisory firm",
+    "title": "Bugis MNR Chartered Accountant from Mac & Ross Management Company ",
+    "subtitle": "A Trusted Audit and Advisory firm",
     "badge1": "70+ professionals",
     "badge2": "GCC-wide coverage",
     "badge3": "Strategic financial solutions",
@@ -31,7 +31,8 @@
     "location": "Office no 002, 3539 Naeem Bin Hammad, Al Wizarat, Riyadh",
     "email": "devang@mnrksa.com",
     "phone_ksa": "+966 53 775 0884",
-    "phone_uae": "+971 54 352 2747"
+    "phone_uae": "+971 54 352 2747",
+    "consent": "I agree to the terms and privacy policy."
   },
   "footer": {
     "rights": "All rights reserved."
@@ -39,7 +40,8 @@
   "workWithUs": {
     "title": "Work With Us",
     "messageLabel": "Message",
-    "submit": "Submit Inquiry"
+    "submit": "Submit Inquiry",
+    "consent": "I agree to the terms and privacy policy."
   },
   "about": {
     "badge": "About Us",
@@ -62,27 +64,22 @@
     "1": {
       "title": "Company Formation & Licensing",
       "description": "Comprehensive support for MISA Investment Licenses, Commercial Registration (CR), and Regional Headquarters (RHQ) setup."
- 
     },
     "2": {
       "title": "Audit & Assurance",
       "description": "Statutory and internal audit services to ensure financial integrity and regulatory compliance."
-     
     },
     "3": {
       "title": "VAT Compliance Support",
       "description": "Expert management of VAT registration, filing, and ongoing ZATCA requirements."
-   
     },
     "4": {
       "title": "Withholding Tax (WHT) Advisory",
       "description": "Strategic support for navigating WHT obligations and cross-border payment compliance."
-   
     },
     "5": {
       "title": "Comprehensive Tax Assistance",
       "description": "End-to-end tax planning, preparation, and submission services."
-   
     },
     "6": {
       "title": "Ultimate Beneficiary Ownership (UBO) Advisory",
@@ -108,7 +105,7 @@
       "3": {
         "name": "Harsh Khetan ",
         "title": "CA",
-        "description":"CA Harsh Khetan is a Chartered Accountant with over 13 years of experience in internal and external audits, policies and procedures, and accounting. He brings extensive experience in organizing and managing external audits for clients across diversified industries and has handled both internal and statutory audits for corporate and listed companies. His professional journey reflects strong expertise in audit execution, compliance, and financial reporting across varied business sectors.",
+        "description": "CA Harsh Khetan is a Chartered Accountant with over 13 years of experience in internal and external audits, policies and procedures, and accounting. He brings extensive experience in organizing and managing external audits for clients across diversified industries and has handled both internal and statutory audits for corporate and listed companies. His professional journey reflects strong expertise in audit execution, compliance, and financial reporting across varied business sectors.",
         "image": "/about/image5.png"
       },
       "4": {
@@ -129,7 +126,6 @@
         "description": "Muhammad Anus, CA, MS (Accounting & Finance), is a Chartered Accountant, with Big Four experience. He specializes in statutory audits, IFRS compliance, and risk management, and has served clients across diverse industries. Muhammad is recognized for his strong technical expertise, professional judgment, and commitment to delivering high-quality, value-driven services.",
         "image": "/about/image3.png"
       }
-      
     }
   },
   "headerPopup": {
@@ -137,6 +133,7 @@
     "namePlaceholder": "Your Name",
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Message",
-    "submit": "Submit"
+    "submit": "Submit",
+    "consent": "I agree to the terms and privacy policy."
   }
 }

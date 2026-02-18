@@ -332,11 +332,11 @@ export default function Home() {
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             {t("hero.title")}
           </h1>
-<div className="flex justify-center">
-          <p className="mt-4 text-lg text-gray-300 sm:text-xl text-center">
-            {t("hero.subtitle")}
-          </p>
-</div>
+          <div className="flex justify-center">
+            <p className="mt-4 text-lg text-gray-300 sm:text-xl text-center">
+              {t("hero.subtitle")}
+            </p>
+          </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-base text-gray-200">
             <div className="rounded-full border border-white/10 px-4 py-2">
               {t("hero.badge1")}
@@ -471,14 +471,14 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="w-full space-y-5 p-6 border border-red-300 rounded-2xl"
+              className="w-full space-y-4 p-6 border border-red-300 rounded-2xl"
             >
               <div className="space-y-2">
                 <label className="text-sm font-medium">{t("contact.fullName")}</label>
                 <input
                   type="text"
                   placeholder={t("contact.fullNamePlaceholder")}
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
                 />
               </div>
 
@@ -487,7 +487,7 @@ export default function Home() {
                 <input
                   type="email"
                   placeholder={t("contact.workEmailPlaceholder")}
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
                 />
               </div>
 
@@ -496,17 +496,29 @@ export default function Home() {
                 <input
                   type="text"
                   placeholder={t("contact.companyPlaceholder")}
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium">{t("contact.help")}</label>
                 <textarea
-                  rows={4}
+                  rows={3}
                   placeholder={t("contact.helpPlaceholder")}
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37] focus:ring-2 focus:ring-[#E94C37]/30"
                 />
+              </div>
+
+              <div className="flex items-start gap-2">
+                <input
+                  type="checkbox"
+                  id="contact-consent"
+                  required
+                  className="mt-1 h-4 w-4 cursor-pointer rounded border-gray-300 text-[#E94C37] focus:ring-[#E94C37]"
+                />
+                <label htmlFor="contact-consent" className="text-xs text-slate-600">
+                  {t("contact.consent")}
+                </label>
               </div>
 
               {/* BUTTON ANIMATION */}
@@ -527,11 +539,11 @@ export default function Home() {
       {/* Popup Modal */}
       {isPopupOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50  p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
           onClick={() => setIsPopupOpen(false)}
         >
           <div
-            className="relative w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl"
+            className="relative w-full max-w-lg rounded-2xl bg-white p-5 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -541,30 +553,30 @@ export default function Home() {
               ✕
             </button>
 
-            <h2 className="text-2xl font-semibold text-[#0d1b3f] mb-4">
+            <h2 className="text-xl font-semibold text-[#0d1b3f] mb-3">
               {t("workWithUs.title")}
             </h2>
 
-            <form className="space-y-4" onSubmit={handleWorkWithUsSubmit}>
+            <form className="space-y-3" onSubmit={handleWorkWithUsSubmit}>
               <div>
-                <label className="text-sm font-medium">{t("contact.fullName")}</label>
+                <label className="text-xs font-medium">{t("contact.fullName")}</label>
                 <input
                   type="text"
                   placeholder=""
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37]"
                 />
               </div>
 
               <div>
-                <label className="text-sm font-medium">{t("contact.workEmail")}</label>
+                <label className="text-xs font-medium">{t("contact.workEmail")}</label>
                 <input
                   type="email"
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37]"
                 />
               </div>
 
               <div>
-                <label className="text-sm font-medium">Phone Number</label>
+                <label className="text-xs font-medium">Phone Number</label>
                 <input
                   type="tel"
                   value={workPhone}
@@ -573,7 +585,7 @@ export default function Home() {
                   inputMode="numeric"
                   pattern="\d{10}"
                   placeholder="Enter 10-digit phone number"
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37]"
                 />
                 {workPhoneError && (
                   <p className="mt-1 text-sm text-red-500">{workPhoneError}</p>
@@ -581,19 +593,30 @@ export default function Home() {
               </div>
 
               <div>
-                <label className="text-sm font-medium">{t("contact.company")}</label>
+                <label className="text-xs font-medium">{t("contact.company")}</label>
                 <input
                   type="text"
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37]"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-medium">{t("workWithUs.messageLabel")}</label>
+                <textarea
+                  rows={3}
+                  className="w-full rounded-2xl border border-slate-200 px-4 py-2 text-sm focus:border-[#E94C37]"
                 />
               </div>
 
-              <div>
-                <label className="text-sm font-medium">{t("workWithUs.messageLabel")}</label>
-                <textarea
-                  rows={4}
-                  className="w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm focus:border-[#E94C37]"
+              <div className="flex items-start gap-2">
+                <input
+                  type="checkbox"
+                  id="work-consent"
+                  required
+                  className="mt-1 h-4 w-4 cursor-pointer rounded border-gray-300 text-[#E94C37] focus:ring-[#E94C37]"
                 />
+                <label htmlFor="work-consent" className="text-xs text-slate-600">
+                  {t("workWithUs.consent")}
+                </label>
               </div>
 
               <button
@@ -672,35 +695,37 @@ export default function Home() {
       </footer>
 
       {/* Scroll to Top Arrow */}
-      {showScrollTop && (
-        <>
-          {/* Scroll to Top Button */}
-          <button
-            onClick={() => {
-              if (typeof window !== "undefined") {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }
-            }}
-            aria-label="Scroll to top"
-            className="fixed bottom-6 right-6 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#E94C37] text-white shadow-lg"
-          >
-            <IoChevronUp className="h-5 w-5" />
-          </button>
+      {
+        showScrollTop && (
+          <>
+            {/* Scroll to Top Button */}
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+              aria-label="Scroll to top"
+              className="fixed bottom-6 right-6 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#E94C37] text-white shadow-lg"
+            >
+              <IoChevronUp className="h-5 w-5" />
+            </button>
 
-          {/* Separate Phone Button (scrolls to contact section) */}
-          <button
-            onClick={() => {
-              const el = document.querySelector("#contact") as HTMLElement | null;
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            aria-label="Contact"
-            className="fixed bottom-20 right-6 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#0b1d3a] text-white shadow-lg border border-[#E94C37]"
-          >
-            <FaPhoneAlt className="h-4 w-4" />
-          </button>
+            {/* Separate Phone Button (scrolls to contact section) */}
+            <button
+              onClick={() => {
+                const el = document.querySelector("#contact") as HTMLElement | null;
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              aria-label="Contact"
+              className="fixed bottom-20 right-6 z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[#0b1d3a] text-white shadow-lg border border-[#E94C37]"
+            >
+              <FaPhoneAlt className="h-4 w-4" />
+            </button>
 
-        </>
-      )}
-    </main>
+          </>
+        )
+      }
+    </main >
   );
 }
