@@ -25,36 +25,7 @@ const services: ServiceCard[] = [
         descriptionKey: "services.1.description",
         icon: "square",
     },
-    {
-        id: 2,
-        titleKey: "services.4.title",
-        descriptionKey: "services.4.description",
-        icon: "hexagon",
-    },
-    {
-        id: 3,
-        titleKey: "services.3.title",
-        descriptionKey: "services.3.description",
-        icon: "triangle",
-    },
-    {
-        id: 4,
-        titleKey: "services.2.title",
-        descriptionKey: "services.2.description",
-        icon: "circle",
-    },
-    {
-        id: 5,
-        titleKey: "services.5.title",
-        descriptionKey: "services.5.description",
-        icon: "square",
-    },
-    {
-        id: 6,
-        titleKey: "services.6.title",
-        descriptionKey: "services.6.description",
-        icon: "circle",
-    },
+  
 ];
 
 interface ChooseTheBestProps {
@@ -159,14 +130,13 @@ const ChooseTheBest = ({ onOpenPopup }: ChooseTheBestProps) => {
                                         : "text-gray-500 hover:text-gray-800"
                                         }`}
                                 >
-                                    {String(index + 1).padStart(2, "0")}.
                                     {activeIndex === index && (
-                                        <motion.div
-                                            layoutId="activeIndicator"
-                                            className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#E94C37]"
-                                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                                        />
-                                    )}
+    <motion.div
+        layoutId="activeIndicator"
+        className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#E94C37]"
+        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+    />
+)}
                                 </button>
                             ))}
                         </div>

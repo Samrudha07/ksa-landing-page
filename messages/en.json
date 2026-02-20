@@ -28,8 +28,8 @@
     "help": "How can we help?",
     "helpPlaceholder": "Briefly share your needs or questions",
     "submit": "Submit Inquiry",
-    "location": "Office no 002, 3539 Naeem Bin Hammad, Al Wizarat, Riyadh",
-    "email": "devang@mnrksa.com",
+      "location": "Building 3544, Al Diriyah Street, Al Wizarat District, Riyadh 12622, Kingdom of Saudi Arabia",
+   "email": "devang@mnrksa.com",
     "phone_ksa": "+966 53 775 0884",
     "phone_uae": "+971 54 352 2747",
     "consent": "I agree to the terms and privacy policy."
@@ -46,8 +46,8 @@
   "about": {
     "badge": "About Us",
     "heading": "Compliance & Advisory Excellence for Businesses in Saudi Arabia",
-    "p1": "Mac & Ross Management Company is a leading Compliance and Advisory firm in Saudi Arabia. As a member of RT ASEAN, a globally recognized network, we combine local market expertise with international standards to provide strategic financial solutions.",
-    "p2": "With a dedicated team of 70+ professionals across the GCC, we serve both SME and MNE clients, helping them navigate complex regulatory environments and drive sustainable growth.",
+    "p1": "Bugis MNR Chartered Accountant is a prominent provider of Audit, Accounting, and Advisory services in the Kingdom of Saudi Arabia. We deliver strategic financial guidance by blending deep regional insight with globally recognized professional standards.",
+    "p2": "Backed by a team of over 70 skilled professionals operating from our offices in Riyadh, across KSA, and the UAE, we support a diverse client base that includes listed companies, large corporates, family-owned businesses, and non-profit entities. Our focus is on strengthening compliance frameworks, improving operational efficiency, and enabling long-term, sustainable growth.",
     "feature1": "Compliance & Advisory Specialists",
     "feature2": "Member of RT ASEAN Global Network",
     "feature3": "Local GCC Market Expertise",
@@ -60,32 +60,17 @@
     "cta": "Talk to an advisor",
     "completion": "Completion"
   },
+ 
   "services": {
     "1": {
-      "title": "Company Formation & Licensing",
-      "description": "Comprehensive support for MISA Investment Licenses, Commercial Registration (CR), and Regional Headquarters (RHQ) setup."
-    },
-    "2": {
+      "tagline": "Reliable & Transparent",
+      "heading": "Audit & Assurance Services in Saudi Arabia",
+      "subheading": "Ensuring Compliance, Accuracy, and Financial Integrity",
       "title": "Audit & Assurance",
-      "description": "Statutory and internal audit services to ensure financial integrity and regulatory compliance."
-    },
-    "3": {
-      "title": "VAT Compliance Support",
-      "description": "Expert management of VAT registration, filing, and ongoing ZATCA requirements."
-    },
-    "4": {
-      "title": "Withholding Tax (WHT) Advisory",
-      "description": "Strategic support for navigating WHT obligations and cross-border payment compliance."
-    },
-    "5": {
-      "title": "Comprehensive Tax Assistance",
-      "description": "End-to-end tax planning, preparation, and submission services."
-    },
-    "6": {
-      "title": "Ultimate Beneficiary Ownership (UBO) Advisory",
-      "description": "Specialized guidance on disclosure requirements and corporate transparency governance."
+      "description": "At Bugis MNR Chartered Accountants, we deliver reliable audit and assurance solutions designed to strengthen governance and build trust. Our team conducts independent evaluations in line with globally accepted standards, ensuring that financial reporting is accurate, compliant, and aligned with applicable regulations. We work closely with our clients to understand their business environment, identify key risk areas, and provide practical recommendations that support informed decision-making and long-term sustainability."
     }
-  },
+  }
+,
   "team": {
     "badge": "Our Experts",
     "heading": "Meet Our Leadership Team",

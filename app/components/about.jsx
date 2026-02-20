@@ -120,11 +120,11 @@ const About = ({ onOpenPopup }) => {
                         </h2>
 
                         <p className="text-gray-600 text-lg text-justify mb-6">
-                            {t("about.p1")}
+                            Bugis MNR Chartered Accountant is a prominent provider of Audit, Accounting, and Advisory services in the Kingdom of Saudi Arabia. We deliver strategic financial guidance by blending deep regional insight with globally recognized professional standards.
                         </p>
 
                         <p className="text-gray-600 text-lg text-justify mb-8">
-                            {t("about.p2")}
+Backed by a team of over 70 skilled professionals operating from our offices in Riyadh, across KSA, and the UAE, we support a diverse client base that includes listed companies, large corporates, family-owned businesses, and non-profit entities. Our focus is on strengthening compliance frameworks, improving operational efficiency, and enabling long-term, sustainable growth.
                         </p>
 
                         {/* Features List */}
