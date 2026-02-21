@@ -28,8 +28,8 @@
     "help": "How can we help?",
     "helpPlaceholder": "Briefly share your needs or questions",
     "submit": "Submit Inquiry",
-      "location": "Building 3544, Al Diriyah Street, Al Wizarat District, Riyadh 12622, Kingdom of Saudi Arabia",
-   "email": "devang@mnrksa.com",
+    "location": "Building 3544, Al Diriyah Street, Al Wizarat District, Riyadh 12622, Kingdom of Saudi Arabia",
+    "email": "devang@mnrksa.com",
     "phone_ksa": "+966 53 775 0884",
     "phone_uae": "+971 54 352 2747",
     "consent": "I agree to the terms and privacy policy."
@@ -45,11 +45,11 @@
   },
   "about": {
     "badge": "About Us",
-    "heading": "Compliance & Advisory Excellence for Businesses in Saudi Arabia",
-    "p1": "Bugis MNR Chartered Accountant is a prominent provider of Audit, Accounting, and Advisory services in the Kingdom of Saudi Arabia. We deliver strategic financial guidance by blending deep regional insight with globally recognized professional standards.",
-    "p2": "Backed by a team of over 70 skilled professionals operating from our offices in Riyadh, across KSA, and the UAE, we support a diverse client base that includes listed companies, large corporates, family-owned businesses, and non-profit entities. Our focus is on strengthening compliance frameworks, improving operational efficiency, and enabling long-term, sustainable growth.",
-    "feature1": "Compliance & Advisory Specialists",
-    "feature2": "Member of RT ASEAN Global Network",
+    "heading": "Audit & Advisory Excellence for Businesses in Saudi Arabia",
+    "description1": "Bugis MNR Chartered Accountant is a prominent provider of Audit, Accounting, and Advisory services in the Kingdom of Saudi Arabia. We deliver strategic financial guidance by blending deep regional insight with globally recognized professional standards.",
+    "description2": "Backed by a team of over 70 skilled professionals operating from our offices in Riyadh, across KSA, and the UAE, we support a diverse client base that includes listed companies, large corporates, family-owned businesses, and non-profit entities. Our focus is on strengthening compliance frameworks, improving operational efficiency, and enabling long-term, sustainable growth.",
+    "feature1": "Audit & Advisory Specialists",
+    "feature2": "Member of  Global Network",
     "feature3": "Local GCC Market Expertise",
     "feature4": "Serving SMEs & MNEs Across GCC"
   },
@@ -60,7 +60,6 @@
     "cta": "Talk to an advisor",
     "completion": "Completion"
   },
- 
   "services": {
     "1": {
       "tagline": "Reliable & Transparent",
@@ -69,8 +68,7 @@
       "title": "Audit & Assurance",
       "description": "At Bugis MNR Chartered Accountants, we deliver reliable audit and assurance solutions designed to strengthen governance and build trust. Our team conducts independent evaluations in line with globally accepted standards, ensuring that financial reporting is accurate, compliant, and aligned with applicable regulations. We work closely with our clients to understand their business environment, identify key risk areas, and provide practical recommendations that support informed decision-making and long-term sustainability."
     }
-  }
-,
+  },
   "team": {
     "badge": "Our Experts",
     "heading": "Meet Our Leadership Team",

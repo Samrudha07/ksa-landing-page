@@ -117,35 +117,11 @@ const ChooseTheBest = ({ onOpenPopup }: ChooseTheBestProps) => {
                 </div>
 
                 {/* Right Column - Scrollable Content */}
-                <div className="lg:w-2/3 bg-gray-100 relative ">
-                    {/* Numbered Navigation */}
-                    <div className="sticky top-0 z-20 bg-gray-100/95 backdrop-blur-sm border-b border-[#E94C37]/20 px-6 py-4">
-                        <div className="flex flex-wrap gap-6 md:gap-8 max-w-3xl mx-auto">
-                            {services.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => scrollToService(index)}
-                                    className={`relative text-lg font-semibold transition-all duration-300 cursor-pointer ${activeIndex === index
-                                        ? "text-[#E94C37]"
-                                        : "text-gray-500 hover:text-gray-800"
-                                        }`}
-                                >
-                                    {activeIndex === index && (
-    <motion.div
-        layoutId="activeIndicator"
-        className="absolute -bottom-2 left-0 right-0 h-0.5 bg-[#E94C37]"
-        transition={{ type: "spring", stiffness: 380, damping: 30 }}
-    />
-)}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Scrollable Service Cards */}
+                <div className="lg:w-2/3 bg-gray-100 relative flex items-center justify-center">
+                    {/* Centered Service Card */}
                     <div
                         ref={scrollContainerRef}
-                        className="max-h-[75vh] overflow-y-auto scrollbar-thin scrollbar-thumb-[#E94C37]/30 scrollbar-track-transparent [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                        className="w-full flex flex-col items-center justify-center py-12 px-5 min-h-[420px]"
                     >
                         {services.map((service, index) => {
                             const imageUrl = getRandomImageUrl(service.id);

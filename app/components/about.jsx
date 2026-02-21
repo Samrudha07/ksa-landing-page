@@ -3,7 +3,7 @@
 
 // const features = [
 //     "Compliance & Advisory Specialists",
-//     "Member of RT ASEAN Global Network",
+//     "Member of  Global Network",
 //     "Local GCC Market Expertise",
 //     "Serving SMEs & MNEs Across GCC",
 // ];
@@ -39,7 +39,7 @@
 
 //                         <p className="text-muted-foreground text-base leading-relaxed mb-6">
 //                             Mac &amp; Ross Management Company is a leading Compliance and Advisory firm in Saudi Arabia.
-//                             As a member of RT ASEAN, a globally recognized network, we combine local market expertise
+//                             As a member of , a globally recognized network, we combine local market expertise
 //                             with international standards to provide strategic financial solutions.
 //                         </p>
 
@@ -120,11 +120,11 @@ const About = ({ onOpenPopup }) => {
                         </h2>
 
                         <p className="text-gray-600 text-lg text-justify mb-6">
-                            Bugis MNR Chartered Accountant is a prominent provider of Audit, Accounting, and Advisory services in the Kingdom of Saudi Arabia. We deliver strategic financial guidance by blending deep regional insight with globally recognized professional standards.
+                            {t("about.description1")}
                         </p>
 
                         <p className="text-gray-600 text-lg text-justify mb-8">
-Backed by a team of over 70 skilled professionals operating from our offices in Riyadh, across KSA, and the UAE, we support a diverse client base that includes listed companies, large corporates, family-owned businesses, and non-profit entities. Our focus is on strengthening compliance frameworks, improving operational efficiency, and enabling long-term, sustainable growth.
+                            {t("about.description2")}
                         </p>
 
                         {/* Features List */}
