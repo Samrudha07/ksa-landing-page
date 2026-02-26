@@ -83,13 +83,13 @@
         "name": "Dheeraj Ranasaria ",
         "title": "CA, FCA",
         "description": "CA Dheeraj Ranasaria (FCA) is a seasoned Audit and Assurance expert with over 2 decades of experience in risk advisory and systems consultancy. Having led complex assignments across all major sectors, he specializes in IFRS, IAS, and IPSAS compliance. Dheeraj is recognized for transforming intricate accounting challenges into streamlined, risk-resilient business processes.",
-        "image": "/about/image4.png"
+        "image": "/about/image41.png"
       },
       "3": {
         "name": "Harsh Khetan ",
         "title": "CA",
         "description": "CA Harsh Khetan is a Chartered Accountant with over 13 years of experience in internal and external audits, policies and procedures, and accounting. He brings extensive experience in organizing and managing external audits for clients across diversified industries and has handled both internal and statutory audits for corporate and listed companies. His professional journey reflects strong expertise in audit execution, compliance, and financial reporting across varied business sectors.",
-        "image": "/about/image5.png"
+        "image": "/about/image51.png"
       },
       "4": {
         "name": "Mankush Soni ",
@@ -118,5 +118,8 @@
     "messagePlaceholder": "Message",
     "submit": "Submit",
     "consent": "I agree to the terms and privacy policy."
+  },
+  "whatsapp": {
+    "label": "Chat with us"
   }
 }

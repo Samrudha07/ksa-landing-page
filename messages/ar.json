@@ -118,5 +118,8 @@
     "messagePlaceholder": "رسالتك",
     "submit": "إرسال",
     "consent": "أوافق على الشروط وسياسة الخصوصية."
+  },
+  "whatsapp": {
+    "label": "تحدث معنا"
   }
 }
