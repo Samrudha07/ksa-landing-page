@@ -154,9 +154,7 @@ export default function Home() {
             <a href="#" className="block text-xl font-semibold text-[#0d1b3f]">
               KSA
             </a>
-            <a href="#" className="block text-sm font-semibold text-[#0d1b3f]">
-              Mac & Ross
-            </a>
+
           </div>
 
           {/* Desktop Menu */}
@@ -635,7 +633,7 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           {/* Brand / Summary */}
           <div className="max-w-md space-y-3">
-            <h3 className="text-lg font-semibold text-white">Mac & Ross</h3>
+            <h3 className="text-lg font-semibold text-white">KSA</h3>
             <p className="text-xs sm:text-sm text-slate-200/80 text-justify">
               {t("contact.description")}
             </p>
@@ -689,7 +687,7 @@ export default function Home() {
         </div>
 
         <div className="mt-8 text-center text-[11px] sm:text-xs text-white/60">
-          © {new Date().getFullYear()} Mac & Ross Management Company.{" "}
+          © {new Date().getFullYear()} KSA.{" "}
           {t("footer.rights")}
         </div>
       </footer>

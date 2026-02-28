@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mac & Ross Management Company | KSA Advisory",
+  title: "KSA Advisory",
   description:
     "Compliance and advisory services in Saudi Arabia covering company formation, taxation, and audit support.",
 };
